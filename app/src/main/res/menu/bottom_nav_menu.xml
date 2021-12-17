@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?site https://www.geeksforgeeks.org/bottom-navigation-bar-in-android ?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/catalog"
+        android:title="Catalog"
+        android:icon="@drawable/electronic"/>
+    <item
+        android:id="@+id/map"
+        android:title="Map"
+        android:iconTint="@color/teal_200"
+        android:titleCondensed="TRUE"
+        android:icon="@drawable/electronic"
+        android:orderInCategory="5"/>
+    <item
+        android:id="@+id/scan"
+        android:title="Scan"
+        android:icon="@drawable/electronic"/>
+    <item
+        android:id="@+id/searx"
+        android:title="Search"
+        android:icon="@drawable/electronic"/>
+
+</menu>

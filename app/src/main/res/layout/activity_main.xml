@@ -9,8 +9,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
+        android:baselineAligned="false"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="80dp"
+        android:paddingBottom="150dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2">
         <LinearLayout
@@ -18,46 +23,56 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="4"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-                <Button
+                android:layout_height="200dp">
+
+                <ImageButton
+                    android:contentDescription="@string/batteries"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="liquid"/>
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/batteries"
+                    android:background="#00000000"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="200dp"
                 android:layout_weight="1">
-                <Button
+                <ImageButton
+                    android:contentDescription="@string/bulbs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="batteries"/>
+                    android:src="@drawable/bulbs"
+                    android:scaleType="fitCenter"
+                    android:background="#00000000"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="200dp"
                 android:layout_weight="1">
-                <Button
+                <ImageButton
+                    android:contentDescription="@string/electronic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="light-bulbs"/>
+                    android:src="@drawable/electronic"
+                    android:scaleType="fitCenter"
+                    android:background="#00000000"/>
             </LinearLayout>
             <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="200dp"
             android:layout_weight="1">
-                <Button
+                <ImageButton
+                    android:contentDescription="@string/glass"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="food"/>
+                    android:src="@drawable/glass"
+                    android:scaleType="fitCenter"
+                    android:background="#00000000"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -66,51 +81,86 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="4"
+            android:layout_marginStart="20dp"
             android:orientation="vertical">
-            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="200dp"
                 android:layout_weight="1">
-                <Button
+                <ImageButton
+                    android:contentDescription="@string/metal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="paper"/>
+                    android:src="@drawable/metal"
+                    android:scaleType="fitCenter"
+                    android:background="#00000000"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="200dp"
                 android:layout_weight="1">
-                <Button
+                <ImageButton
+                    android:contentDescription="@string/organic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="glass"/>
+                    android:src="@drawable/organic"
+                    android:scaleType="fitCenter"
+                    android:background="#00000000"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="200dp"
                 android:layout_weight="1">
-                <Button
+                <ImageButton
+                    android:contentDescription="@string/paper"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="plastic"/>
+                    android:src="@drawable/paper"
+                    android:scaleType="fitCenter"
+                    android:background="#00000000"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="200dp"
                 android:layout_weight="1">
-                <Button
+                <ImageButton
+                    android:contentDescription="@string/plastic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#5E81AC"
-                    android:text="metal"/>
+                    android:src="@drawable/plastic"
+                    android:scaleType="fitCenter"
+                    android:background="#00000000"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_height="75dp"
+        android:layout_width="match_parent"
+        android:background="@color/nord3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/nord3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/top_nav_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

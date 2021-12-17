@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Recycle</string>
+    <string name="plastic">Plastic</string>
+    <string name="metal">Metal</string>
+    <string name="paper">Paper</string>
+    <string name="organic">Organic</string>
+    <string name="glass">Glass</string>
+    <string name="electronic">Electronic</string>
+    <string name="bulbs">Bulbs</string>
+    <string name="batteries">Batteries</string>
 </resources>
